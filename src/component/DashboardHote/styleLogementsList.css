@@ -1,0 +1,62 @@
+.admin-content{
+	flex: 8;
+	height: 100%;
+	padding: 40px 100px 100px;
+	border-left: 5px;
+
+
+}
+
+.button-group{
+	margin-left:0px;
+
+}
+.button-group .btn{
+	background-color: #89ba16;
+	margin-left: 3px;
+	font-size: 20px; 
+	font-weight: 5px;
+}
+
+.admin-content .page-title{
+	text-align: center;
+	margin: 1.5rem;
+}
+
+table{
+	width: 100%;
+	font-size: 1.1rem;
+	text-align:center;
+	padding-left: 0 ;
+
+
+}
+th, td{
+	padding: 20px;
+	/*text-align: left;*/
+	border-bottom: 	1px solid #d3d3d3;
+}
+
+.edit{
+	color: green;
+}
+
+.delete{
+	color: red;
+}
+
+.publish{
+	color: blue;
+}
+
+.edit,
+.delete,
+.publish{
+	text-decoration: none;
+}
+
+.edit:hover,
+.delete:hover,
+.publish:hover{
+	text-decoration: underline;
+}

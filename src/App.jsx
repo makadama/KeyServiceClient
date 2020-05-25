@@ -59,6 +59,8 @@ import UserProfile  from "./component/DashboardHote/UserProfile";
 import NavEtSideVoyageur from "./component/DashboardVoyageur/NavEtSideVoyageur/LeftSideBar";
 //la page d'accueil voyageur
 import DashboardVoyageur from "./component/DashboardVoyageur/DashboardVoyageur";
+
+import PanierLists from "./component/DashboardVoyageur/PanierLists";
 //---------------------------------------------------------------------------------
 
 import NotFound from "./component/NotFound";
@@ -121,6 +123,7 @@ export default class App extends Component {
             <Route path='/resetPassword/:slug' component={AuthContainer}/>
 //ici on a les routes privées. seul les utilisateurs ayant une session peuvent y accéder
             <PrivateRoute  path="/(DashboardVoyageur)" component={Dashboard1}/>
+            <PrivateRoute path="/paniers" component={Dashboard1}/>
             <PrivateRoute  path="/dashboardHote" component={Dashboard2}/>
             <PrivateRoute  path="/logements" component={Dashboard2}/>
             <PrivateRoute path="/logements/addLogementPage" component={Dashboard2}/>
@@ -189,6 +192,7 @@ const Dashboard1 = () =>(
         <NavEtSideVoyageur/>
         <Route path="/dashboardVoyageur" render={() => <Redirect to="/dashboardVoyageur" />} />
         <Route path="/dashboardVoyageur" component={DashboardVoyageur} />
+        <Route path="/paniers" component={PanierLists} />
 
       </div>
   )

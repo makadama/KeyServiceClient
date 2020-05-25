@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { getLogementById, updateLogement, getLogements } from "../../actions/logementActions";
+import { getUser, updateUser } from "../../actions/userActions";
 import classnames from "classnames";
 import { bindActionCreators } from 'redux';
 import NavDashboard from './NavDashboard';
@@ -19,6 +19,8 @@ class UserProfile extends Component {
       firstname: "",
       lastname: "",
       password: "",
+      password2: "",
+      password3: "",
       adress: "",
       telephone: "",
       type: "",
@@ -27,13 +29,16 @@ class UserProfile extends Component {
 
 		this.onChange=this.onChange.bind(this)
 		this.onSubmit= this.onSubmit.bind(this)
+    this.onSubmitPassword= this.onSubmitPassword.bind(this)
 		}
 
 
     componentDidMount(){
-
+        this.props.getUser(this.props.auth.user.id);
      
     }
+
+
 
     
 
@@ -51,7 +56,17 @@ class UserProfile extends Component {
     });
   }*/
 
+ componentWillReceiveProps = (nextProps) => {
+    this.setState({
+      email: nextProps.hote.email,
+      firstname: nextProps.hote.firstname,
+      lastname: nextProps.hote.lastname,
+      adress: nextProps.hote.adress,
+      telephone: nextProps.hote.telephone,
 
+      
+    });
+  }
 
 		onChange (e){
 		this.setState({[e.target.name]:e.target.value})
@@ -63,32 +78,50 @@ class UserProfile extends Component {
 			email: this.state.email,
       firstname: this.state.firstname,
       lastname: this.state.lastname,
-      password: this.state.password,
+      password: this.props.hote.password,
       adress: this.state.adress,
       telephone: this.state.telephone,
-      type: this.state.type,
+      type: this.props.auth.user.type
 }
-
+    this.props.updateUser(this.props.match.params.id, userInfo);
 		
 		}
+
+onSubmitPassword(e){
+      e.preventDefault();
+    const userInfo={
+      email: this.props.hote.email,
+      firstname: this.props.hote.firstname,
+      lastname: this.props.hote.lastname,
+      password: this.state.password,
+      password2: this.state.password2,
+      password3: this.state.password3,
+      adress: this.props.hote.adress,
+      telephone: this.props.hote.telephone,
+      type: this.props.auth.user.type
+}
+    this.props.updateUser(this.props.match.params.id, userInfo);
+}
+
+   
 	
   render() {
   		
   		const { errors } = this.state;
-      const { logement } = this.props.logement;
+      
       const { user } = this.props.auth;
       console.log(user);
-      console.log(logement);
+
+      const { hote } =  this.props;
+      console.log(hote);
+     
 
 
    
     return (
-      <div>
-        
+      <div> 
         <div className="container forms">
         	<div className='row'>
-	        	
-
 	             <p className="text-center col-lg-12 col-md-12 col-xs-12">
 	                        {errors.message ? <span className="alert alert-danger alert-dismissible fade show" style={{width:'auto'}}>{errors.message}
 	                           <button type="button" className="close" data-dismiss="alert" aria-label="Close">
@@ -101,13 +134,12 @@ class UserProfile extends Component {
     <div className="row">
         
         <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
             <div className="card">
                 <div className="card-header bg-primary text-white"><i className="fa fa-user"></i> Mes informations
                 </div>
                 <div className="card-body">
                     <form noValidate onSubmit={this.onSubmit}>
-                    <h1 className="h3 mb-3 font-weight-normal">Ajouter un bien</h1>
+                    <h1 className="h3 mb-3 font-weight-normal">Mon profil</h1>
                         <p className="text-center">
                         {errors.message ? <span className="alert alert-danger alert-dismissible fade show" style={{width:'auto'}}>{errors.message}
                            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
@@ -116,48 +148,43 @@ class UserProfile extends Component {
                          </span>:''}
                        </p>
                             <div className="form-group">
-                              <label for="adresse">Adresse*</label>
-                              <input type="text" name="adresse"  id="adresse"  className="form-control"
-                                value={this.state.adresse}
+                              <label for="email">email</label>
+                              <input type="text" name="email"  id="email"  className="form-control"
+                                value={this.state.email}
                                 onChange={this.onChange} />    
                             </div>
                             
 
                             <div className="form-group">
-                              <label for="adresse">Adresse*</label>
-                              <input type="text" name="adresse"  id="adresse"  className="form-control"
-                                value={this.state.adresse}
-                                onChange={this.onChange} />    
+                              <label for="firstname">Prénom</label>
+                              <input type="text" name="firstname"  id="firstname"  className="form-control"
+                                value={this.state.firstname}
+                                onChange={this.onChange} disabled />    
                             </div>
 
                              
 
                             <div className="form-group">
-                              <label for="adresse">Adresse*</label>
-                              <input type="text" name="adresse"  id="adresse"  className="form-control"
-                                value={this.state.adresse}
+                              <label for="lastname">Nom</label>
+                              <input type="text" name="lastname"  id="lastname"  className="form-control"
+                                value={this.state.lastname}
                                 onChange={this.onChange} />    
                             </div>
 
                              <div className="form-group">
-                              <label for="adresse">Adresse*</label>
-                              <input type="text" name="adresse"  id="adresse"  className="form-control"
-                                value={this.state.adresse}
+                              <label for="adress">Adresse</label>
+                              <input type="text" name="adress"  id="adress"  className="form-control"
+                                value={this.state.adress}
                                 onChange={this.onChange} />    
                             </div>
                                 
 
-                            <div className="form-group">
-                              <label for="adresse">Adresse*</label>
-                              <input type="text" name="adresse"  id="adresse"  className="form-control"
-                                value={this.state.adresse}
-                                onChange={this.onChange} />    
-                            </div>
+                           
 
                              <div className="form-group">
-                              <label for="code_postal">Superficie*</label>
-                              <input type="text" name="superficie"  id="superficie" placeholder="superficie" className="form-control"
-                                value={this.state.superficie}
+                              <label for="telephone">Téléphone</label>
+                              <input type="text" name="telephone"  id="telephone"  className="form-control"
+                                value={this.state.telephone}
                                 onChange={this.onChange}/>
                             </div>
                             
@@ -180,41 +207,59 @@ class UserProfile extends Component {
                 <div className="card-header bg-primary text-white"><i className="fa fa-pencil"></i> Modifier mon mot de passe
                 </div>
                 <div className="card-body">
-                    <form noValidate >
+                    <form noValidate onSubmit={this.onSubmitPassword}>
                       <div className="form-group">
-                            <label htmlFor="bureau">Mon tarif</label>
-                            <select className={classnames("form-control",{
-                          invalid: errors.bureau
-                          })}
-                          value={this.state.bureau}
-                          onChange={this.onChange}  to="bureau" name="bureau">
-                            <option value=""></option>
-                              <option value="Paris et îles de France">Paris et île de  France</option>
-                              <option value="Lyon">Lyon</option>
-                              <option value="Bordeau">Bordeau</option>
-                              <option value="Marseille">Marseille</option>
-                              <option value="Monaco">Monaco</option>
-                            </select>
-                             <span className="red-text" style={{color:'red'}}>
-                              {errors.bureau}  
-                          </span>
-                            </div>
-                        <div className="form-group">
-                            <label htmlFor="mailSubject">Objet</label>
-                            <select className={classnames("form-control",{
-                            invalid: errors.mailSubject
-                            })}
-                            value={this.state.mailSubject}
-                            onChange={this.onChange} id="mailSubject" name="mailSubject">
-                              <option value=""></option>
-                              <option value="renseignement">Je suis intéressé par les service de Key Service</option>
-                              <option value="voyageur">Je séjourne dans un logement de Key Service</option>
-                              <option value="hôte">Je suis un client de  Key Service</option>
-                              <option value="autre">Autre</option>
-                            </select>
+                            <label htmlFor="password">Ancien mot de passe </label>
+                            <input
+                              id="password"
+                              type="password"
+                              name="password"
+                              placeholder="Password"
+                              className={classnames("form-control",{
+                                  invalid: errors.password
+                                })}
+                              value={this.state.password}
+                              onChange={this.onChange}
+                            />
                             <span className="red-text" style={{color:'red'}}>
-                              {errors.mailSubject}  
-                          </span>
+                                  {errors.password}  
+                            </span>
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="password2">Nouveau mot de passe</label>
+                            <input
+                              id="password2"
+                              type="password"
+                              name="password2"
+                              placeholder="confirm your password"
+                              className={classnames("form-control",{
+                                  invalid: errors.password2
+                                })}
+                              value={this.state.password2}
+                              onChange={this.onChange}
+                            />
+                            <span className="red-text" style={{color:'red'}}>
+                                  {errors.password2}  
+                            </span>
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="password3">Confirmation</label>
+                            <input
+                              id="password3"
+                              type="password"
+                              name="password3"
+                              placeholder="confirm your password"
+                              className={classnames("form-control",{
+                                  invalid: errors.password3
+                                })}
+                              value={this.state.password3}
+                              onChange={this.onChange}
+                            />
+                            <span className="red-text" style={{color:'red'}}>
+                                  {errors.password3}  
+                            </span>
                         </div>
                         
                         <div className="mx-auto">
@@ -237,16 +282,17 @@ class UserProfile extends Component {
   }
 }
 UserProfile.propTypes = {
-  getLogementById: PropTypes.func.isRequired,
-  updateLogement: PropTypes.func.isRequired,
+  getUser: PropTypes.func.isRequired,
+  updateUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
+  hote: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors,
-  logement: state.logement
+  hote: state.hote
 });
 
 
@@ -254,6 +300,6 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  {getLogementById, updateLogement}
+  {getUser, updateUser}
 )(withRouter(UserProfile));
 

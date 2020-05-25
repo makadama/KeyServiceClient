@@ -37,7 +37,7 @@ const LeftSection = () => {
         </li>
         <li>
           <a
-            href="#"
+            href="/paniers"
           >
           <i class="fas fa-shopping-cart" style={{marginRight:'8px'}}></i>
            Nos Paniers

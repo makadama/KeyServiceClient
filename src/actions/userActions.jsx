@@ -1,7 +1,7 @@
 import axios from 'axios';
 import{
 
-	GET_USERS ,
+	GET_USER ,
 	UPDATE_USER, GET_ERRORS
 	
 } from './types';
@@ -29,7 +29,7 @@ axios
 	.catch(err=>
 		dispatch({
         type: GET_ERRORS,
-        payload: err.response.data
+        payload: err
       }));
 
 }
@@ -53,6 +53,7 @@ axios
 			type: GET_USER,
 			payload: res.data
 		})
+		console.log(res.data);
 		})
 	.catch(err=>
 		dispatch({

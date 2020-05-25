@@ -7,7 +7,7 @@ export default (state = {}, action )=> {
 		case GET_USER:
 			return action.payload;
 		case UPDATE_USER:
-			return action.payload;
+			return new(action.payload);
 		default:
 			return state;
 	}

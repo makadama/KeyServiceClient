@@ -14,8 +14,8 @@ class DashboardHote extends Component {
     console.log(user);
     return (
         <div className="jumbotron text-center">
-          <h1 className="display-4">Hello, {user.firstname}</h1>
-          <p className="lead"> You are logged in as a host  on key service</p> 
+          <h1 className="display-4">Bonjour, {user.firstname}</h1>
+          <p className="lead"> Bienvenue sur votre compte keyservice</p> 
         </div>
      
     );

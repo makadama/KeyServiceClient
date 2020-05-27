@@ -1,0 +1,62 @@
+section.advantages {
+    text-align: center;
+    padding: 70px 0px;
+}
+
+section.advantages h2,section.advantages h3 {
+    font-family: 'oswald';
+    text-transform: uppercase;
+}
+
+section.advantages p {
+    padding-bottom: 20px;
+}
+
+section.advantages h2 {
+    color: #4183D7;
+}
+
+.single-advantage h3 {
+	padding: 85px 20px;
+	border: 3px solid #fff;
+	margin: 20px;
+}
+
+/* The animation code */
+@keyframes single-adv-hover {
+    0% {background-size: 100%;}
+    50% {background-size: 150%;}
+    100% {background-size: 100%;}
+}
+
+.single-advantage:hover {
+    animation-name: single-adv-hover;
+    animation-duration: 1s;    
+}
+
+.single-advantage {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    padding: 5px;
+    color: #fff;
+    z-index:9;
+    margin: 25px 0px 20px;
+}
+
+.single-advantage img {
+    width: 100%;
+}
+
+.single-advantage:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #00cccb;
+    opacity: .79;
+	z-index:-9;
+}

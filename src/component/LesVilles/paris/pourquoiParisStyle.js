@@ -2,23 +2,24 @@ import styled from 'styled-components';
 
 export const Styles= styled.div`
 .grille{
-	background-color: #F4F6F6;
-	height: auto;
-	
+  background-color: #F4F6F6;
+  height: auto;
+  margin-bottom: 0;
+  
 }
 
 .logos{
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .texte{
-	text-align: center;
-	margin: 0;
-	padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .btns{
-	background: #F4F6F6;
+  background: #F4F6F6;
     color: #eb5424;
    margin-bottom: 10px;
      border-left: none;
@@ -32,13 +33,21 @@ export const Styles= styled.div`
     &: hover{
         background: #fff;
     color: #eb5424
+
+  }
    
     
 }
 
+.titre{
+  color: #ed7e24;
+}
+
+
+
 .chiff{
-	display: block;
-	margin: auto;
+  display: block;
+  margin: auto;
 }
 
 

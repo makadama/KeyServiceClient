@@ -111,7 +111,7 @@ if(token){
  		type: UPDATE_LOGEMENT,
  		payload: res.data
  	})
- 	history.push('/logements');
+ 	//history.push('/logements');
 
  }).catch(err=>{
  	dispatch({

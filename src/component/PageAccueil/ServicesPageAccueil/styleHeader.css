@@ -1,0 +1,73 @@
+.al-services {
+     min-height:100vh;
+     background:rgba(248, 248, 255, 0.85);
+     font-family: 'Lato', sans-serif;
+
+}
+ .al-services-header h2 {
+     color: black;
+     font-size:34px;
+}
+ .al-services-header p {
+     color: black;
+     font-size:18px;
+     font-weight:300;
+     
+}
+ .al-service-box {
+     background:#fff;
+     border-radius:4px;
+     margin-top:20px;
+     transition:all .4s;
+     height: 430px;
+     width: 275px;
+     margin: auto;
+
+}
+ .al-service-box:hover {
+     box-shadow:0 0 35px rgba(0,0,0,.05);
+}
+ .al-service-box:hover .btn {
+     background:#1b7ae8;
+     color:#fff;
+}
+ .al-service-icon {
+     background:rgba(248, 248, 255, 0.85);
+     border-radius:100%;
+     display:inline-block;
+     padding:10px;
+     width:90px;
+     height:90px;
+}
+ .al-service-icon i {
+     color:#1b7ae8;
+     display:inline-block;
+     font-size:62px;
+     position: relative;
+}
+ .al-service-box h3 {
+     color:#ed7e24;
+     font-size:20px;
+     font-weight:500;
+      position: relative;
+}
+ .al-service-box p {
+     color: black;
+     font-size:18px;
+     font-weight:300;
+      
+}
+ .al-service-box .btn {
+     border-color: #00cccb;
+     background: #00cccb;
+     color: white;
+      
+}
+.al-service-box .btn:focus
+{
+    box-shadow:none;
+}
+ .al-service-box .btn:hover {
+     background:#1b7ae8;
+     color:#fff;
+}

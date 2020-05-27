@@ -2,9 +2,11 @@
 import React, { useContext } from 'react';
 import BurgerButton from '../BurgerButton';
 import { LeftSideBarContext } from '../index';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import './style.scss';
 
-const LeftSection = () => {
+const LeftSection= ({auth}) =>{
   const { isShowSidebar, setIsShowSidebar } = useContext(LeftSideBarContext);
   return (
     <div className={`LeftSideBar__LeftSection LeftSideBar__LeftSection--${isShowSidebar ? 'show' : 'hide'}`}>
@@ -14,12 +16,12 @@ const LeftSection = () => {
           onClick={() => setIsShowSidebar(false)}
 
         />
-        <a href="#" style={{marginLeft:'50px', color:'#89ba16',fontSize:'20px', textDecoration:'none'}}> Key Service </a>
+        <a href="/" style={{marginLeft:'50px', color:'#ed7e24',fontSize:'20px', textDecoration:'none'}}> Key Service </a>
       </div>
       <ul className="LeftSideBar__LeftSection__menuWrapper">
         <li>
           <a
-            href="#"
+            href={`/profilVoyageur/${auth.user.id}`}
           >
           <i class="fas fa-user" style={{marginRight:'8px'}}></i>
             Mon profil
@@ -56,4 +58,15 @@ const LeftSection = () => {
   );
 };
 
-export default LeftSection;
+LeftSection.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps
+)(LeftSection);
+

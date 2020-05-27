@@ -9,6 +9,9 @@
   color: #434343;
   text-align: center;
 }
+h1{
+  font-size: 30px;
+}
 .inner{
   max-width: 1200px;
   margin: auto;
@@ -19,7 +22,7 @@
 .border{
   width: 160px;
   height: 5px;
-  background: #6ab04c;
+  background: #ed7e24;
   margin: 26px auto;
 }
 
@@ -49,7 +52,7 @@
   margin: 20px 0;
 }
 .stars{
-  color: #6ab04c;
+  color: #ed7e24;
   margin-bottom: 20px;
 }
 

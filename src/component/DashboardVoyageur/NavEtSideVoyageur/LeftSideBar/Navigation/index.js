@@ -18,12 +18,13 @@ class Navigation extends Component{
 
 return(
     <nav class="navbar navbar-expand-lg  border-bottom navig" style={{backgroundColor:'white'}}>
-        <a class="navbar-brand" style={{width:"30", height:"30", color:'#89ba16'}} href="#">
-        		Key Service
-      </a>
+        <a class="navbar-brand" href="/">
+            <img src="assets/keyLogo_last.jpg" style={{width:"80px", height:"60px"}}
         
+      />
+      </a>
 
-        <button class="navbar-toggler" type="button" style={{backgroundColor:'#89ba16'}} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" style={{backgroundColor:'#ed7e24'}} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -31,24 +32,24 @@ return(
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li>
 
-                    <a class="nav-link" href="#" style={{color:'#89ba16',  fontSize:'20px', marginRight:'10px'}}>
-                 <i className="fas fa-shopping-cart" style={{color:'#89ba16',  fontSize:'20px', marginRight:'3px'}}></i>
+                    <a class="nav-link" href="#" style={{color:'#ed7e24',  fontSize:'20px', marginRight:'10px'}}>
+                 <i className="fas fa-shopping-cart" style={{color:'#ed7e24',  fontSize:'20px', marginRight:'3px'}}></i>
                
               </a>
 
             </li>
           	<li>
 
-                    <a class="nav-link" href="#" style={{color:'#89ba16',  fontSize:'20px', marginRight:'10px'}}>
-                 <i className="fas fa-bell" style={{color:'#89ba16',  fontSize:'20px', marginRight:'3px'}}></i>
+                    <a class="nav-link" href="#" style={{color:'#ed7e24',  fontSize:'20px', marginRight:'10px'}}>
+                 <i className="fas fa-bell" style={{color:'#ed7e24',  fontSize:'20px', marginRight:'3px'}}></i>
                
               </a>
 
           	</li>
             <li class="nav-item dropdown" >
 
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" style={{color:'#89ba16',  fontSize:'20px', marginRight:'3px', textAlign:'right'}} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <i className="fas fa-user" style={{color:'#89ba16',  fontSize:'20px', marginRight:'3px'}}></i>
+                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" style={{color:'#ed7e24',  fontSize:'20px', marginRight:'3px', textAlign:'right'}} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <i className="fas fa-user" style={{color:'#ed7e24',  fontSize:'20px', marginRight:'3px'}}></i>
                 {user.firstname}
               </a>
               <div class="dropdown-menu dropdown-menu-right" style={{textAlign:'right', width:'20px', float:'right'}}  aria-labelledby="navbarDropdown">

@@ -6,6 +6,7 @@ import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 
 
+
 class Login extends Component{
 	constructor(){
 		super()
@@ -70,7 +71,7 @@ class Login extends Component{
 	render(){
 		const { errors } = this.state;
 		return(
-        <div className="container">
+        <div className="container login_container">
     			<div className="row">
     	          <div className="col-md-6 mt-5 mx-auto">
     	            <form noValidate onSubmit={this.onSubmit}>

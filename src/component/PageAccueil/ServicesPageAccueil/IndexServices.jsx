@@ -1,129 +1,67 @@
 import React, { Component } from 'react'
 import styled from  'styled-components';
+import './styleHeader.css';
 
 
-const Styles = styled.div`
-.work {
-    height: auto;
-    padding: 50px 0;
-    overflow: hidden;
-    background: #fff;
-  
-
-}
-
-.work-title {
-    font-size: 60px; 
-    text-align: center;
-}
-
-.span {
-    font-weight: normal;
-}
-
-.part {
-    margin-top: 20px;
-    float: left;
-    height: auto;
-    padding: 100px 0;
-    padding-left: auto;
-    border: 1px solid #888;
-    box-sizing: border-box;
-    text-align: center;
-    width: 100%;
-     &:hover{
-    color: #eb5424;
-  }
-   
-   
-}
-
-
-
-.icon {
-    color: #888;
-    margin-bottom: 20px
-}
-
-.part-title {
-    font-size: 25px;
-    color: #eb5424;
-    margin-bottom: 20px
-}
-
-.line {
-    width: 60%;
-    margin: auto;
-    margin-bottom: 20px
-}
-
-.part-desc {
-    font-size: 14px;
-    color: #888;
-    padding: 20px
-}
-
-
-
-`
 
 
 class IndexServices extends Component {
   render() {
     return (
-    	<Styles>
-          <div className="work">
-            <div className="container-fluid bo">
-                <h2 className="work-title"><span>Nos</span> Services</h2>
-                    <div className="row">
-                        <div className="col-xs-12 col-sm-6 col-md-3  ">
-                            <div className="part first">
-                                <i className="icon fa fa-bolt fa-2x"></i>
-                                <h4 className="part-title">Service 1 </h4>
-                                <hr className="line"/>
-                                <p className="part-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
-                        <div className=" col-xs-12 col-sm-6 col-md-3  ">
-                            <div className="part ">
-                                <i className="icon fa fa-bolt fa-2x "></i>
-                                <h4 className="part-title">Service 2</h4>
-                                <hr className="line"/>
-                                <p className="part-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
 
-                        <div className=" col-xs-12 col-sm-6 col-md-3  ">
-                            <div className="part ">
-                                <i className="icon fa fa-bolt fa-2x "></i>
-                                <h4 className="part-title">Service 3</h4>
-                                <hr className="line"/>
-                                <p className="part-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className=" col-xs-12 col-sm-6 col-md-3   ">
-                            <div className="part ">
-                                <i className="icon fa fa-bolt fa-2x "></i>
-                                <h4 className="part-title">Service 4</h4>
-                                <hr className="line"/>
-                                <p className="part-desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
-                
+    <section className="al-services p-5">
+    <div className="container">
+        <div className="row">
+            <div className="col">
+                <div className="al-services-header text-center">
+                    <h2>Nos services</h2>
+                    <p>Keyservice se chargera de vos biens et de vos locatiares</p>
                 </div>
-                
             </div>
         </div>
-       </Styles>    );
+        <div className="row">
+            <div className="col-sm-6 col-md-6 col-lg-3">
+                <div className="al-service-box pt-5 pb-4 px-5 text-center">
+                    <span className="al-service-icon"> <i className="fas fa-bullhorn" aria-hidden="true"></i></span>
+                    <h3 className="mt-3"> Annonce/optimisation des prix </h3>
+                    <p className="mt-3">création de l'annonce, prix dynamiques... </p>
+                    <a href="#" className="btn btn-outline-primary mt-3">Voir plus</a>
+                </div>
+            </div>
+            <div className="col-sm-6 col-md-6 col-lg-3">
+                <div className="al-service-box pt-5 pb-4 px-5 text-center">
+                    <span className="al-service-icon"> <i className="fas fa-handshake" aria-hidden="true"></i>
+                    </span>
+
+                    <h3 className="mt-3"> Accueil et départ des voyageurs</h3>
+                    <p className="mt-3">remise de clés (checkin, checkout)... </p>
+                    <a href="#" className="btn btn-outline-primary mt-3">Voir plus</a>
+                </div>
+            </div>
+            <div className="col-sm-6 col-md-6 col-lg-3">
+                <div className="al-service-box pt-5 pb-4 px-5 text-center">
+                    <span className="al-service-icon"> <i className="fas fa-headset" aria-hidden="true"></i></span>
+
+                    <h3 className="mt-3"> communication avec le voyageur</h3>
+                    <p className="mt-3">Assistance auprès de vos voyageurs... </p>
+                    <a href="#" className="btn btn-outline-primary mt-3">Voir plus</a>
+                </div>
+            </div>
+            <div className="col-sm-6 col-md-6 col-lg-3">
+                <div className="al-service-box pt-5 pb-4 px-5 text-center">
+                    <span className="al-service-icon"> <i className="fas fa-broom" aria-hidden="true"></i></span>
+
+                    <h3 className="mt-3"> Ménage et état des lieux de vos biens</h3>
+                    <p className="mt-3">ménage da qualité hotelière... </p>
+                    <a href="#" className="btn btn-outline-primary mt-3">Voir plus</a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+        );
+    	
   }
 }
 

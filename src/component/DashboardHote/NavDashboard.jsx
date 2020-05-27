@@ -39,12 +39,12 @@ return(
         </div>
         
         <div className="col-md-4 col-xl-4">
-          <a href="#">
+          <a href={`/logements/${logement.id}/tarif`}>
             <div className="card bg-c-pink order-card">
                 <div className="card-block">
                     
                     <h2 className="text-right"><span className="fa fa-credit-card f-left"></span></h2>
-                    <p className="m-b-0 f-right ">Mes chiffres </p>
+                    <p className="m-b-0 f-right ">Mon Tarif </p>
                 </div>
             </div>
           </a>

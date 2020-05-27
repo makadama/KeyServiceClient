@@ -14,8 +14,8 @@ class DashboardVoyageur extends Component {
 
     return (
       <div class="jumbotron text-center">
-  <h1 class="display-4">Hello, {user.firstname}</h1>
-  <p class="lead"> You are logged in as a traveler  on key service</p>
+  <h1 class="display-4">Bonjour, {user.firstname}</h1>
+  <p class="lead"> Bienvenue sur votre compte keyService</p>
   
 </div>
     );

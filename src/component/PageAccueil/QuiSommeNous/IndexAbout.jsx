@@ -12,12 +12,13 @@ class IndexAbout extends Component {
         		
         		<div className="col-xs-12 col-md-10">
         			<h2 className="titre2 text-center"> Qui somme Nous? </h2>
-        			<p className="texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        			<p className="texte">KeyService est une plateforme qui vous
+               permet de confier votre logement lorsque vous vous absentez de
+                votre domicile et de tirer un revenu sur vos locations. Les voyageurs 
+                sélectionnés pour loger chez vous sont choisis selon un processus de sélection 
+                rigoureux afin d’éviter les mauvaises surprises. A l’heure actuelle,
+                 nous opérons uniquement à Paris intramuros mais comptons nous développer
+                  dans de nouvelles villes dans un futur proche.
 					</p>
         		</div>
         		
@@ -43,7 +44,7 @@ class IndexAbout extends Component {
 		              	
 		            	
 		            	
-		            	<p className="name text-center">500 logements confiés</p>
+		            	<p className="name text-center">300 logements confiés</p>
           			</div>
 
           			<div className="col-xs-12 col-md-4">
@@ -54,7 +55,7 @@ class IndexAbout extends Component {
 		            	
 		            	
 
-		            	<p className="name text-center">4.5/5 évaluation globale</p>
+		            	<p className="name text-center">4.2/5 évaluation globale</p>
           			</div>
         	</div>
 

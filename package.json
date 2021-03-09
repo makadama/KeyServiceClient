@@ -61,5 +61,5 @@
       "ie 11"
     ]
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "https://ks-backend.herokuapp.com/"
 }

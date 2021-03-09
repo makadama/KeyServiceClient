@@ -61,6 +61,5 @@
       "last 1 safari version",
       "ie 11"
     ]
-  },
-  "proxy": "https://ks-backend.herokuapp.com/"
+  }
 }

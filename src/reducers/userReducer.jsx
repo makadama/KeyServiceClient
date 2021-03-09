@@ -1,5 +1,4 @@
-import {  GET_USER , UPDATE_USER} from '../actions/types';
-
+import {  GET_USER , UPDATE_USER, GET_USERS, ADD_USER} from '../actions/types';
 
 
 export default (state = {}, action )=> {

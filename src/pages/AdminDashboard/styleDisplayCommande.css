@@ -1,0 +1,80 @@
+.placeorder {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: space-between;
+}
+ .placeorder .placeorder-info {
+  flex: 3 1 60rem;
+}
+ .placeorder .placeorder-action {
+  flex: 1 1 20rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  padding: 1rem;
+}
+.placeorder .placeorder-info > div {
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  margin: 1rem;
+}
+ .placeorder .placeorder-info > div:first-child {
+  margin-top: 0;
+}
+.placeorder .placeorder-action > ul {
+  padding: 0;
+  list-style-type: none;
+}
+.placeorder .placeorder-action > ul > li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+}
+.placeorder .placeorder-action > ul > li:last-child {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c04000;
+}
+.placeorder .placeorder-actions-payment > div {
+  width: 100%;
+}
+
+ .placeorder  .button {
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+.placeorder  .button:hover {
+  border: 0.1rem #404040 solid;
+}
+.placeorder  .button  {
+  background-color: #00cccb;
+  color: #fff;
+   text-align: center;
+   text-decoration: none;
+}
+.placeorder  .button .secondary {
+  background-color: #f0f0f0;
+}
+.placeorder  .text-center {
+  text-align: center;
+}
+
+.cart-list-container li img {
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+.cart-list-container li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+

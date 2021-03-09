@@ -2,7 +2,7 @@ import axios from 'axios';
 import{
 
 	GET_USER ,
-	UPDATE_USER, GET_ERRORS
+	UPDATE_USER, GET_ERRORS, ADD_USER
 	
 } from './types';
 
@@ -63,5 +63,7 @@ axios
 
 
 }
+
+export 
 
 

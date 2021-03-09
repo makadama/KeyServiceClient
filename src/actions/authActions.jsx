@@ -29,21 +29,21 @@ export const registerUser = (userData, history) => dispatch => {
 
 export const loginUser = userData => dispatch => {
   axios
-    .post("/api/auth/signin", userData)
+    .post("/api/e/auth/signin", userData)
     .then(res => {
       // Save to localStorage
       // Set token to localStorage
-      localStorage.setItem('jwtToken', res.data.accessToken)
-		  const { accessToken } = res.data;
-      const decoded= jwt_decode(accessToken);
-      console.log(accessToken);
+      localStorage.setItem('jwtToken', res.data.token)
+		  const { token } = res.data;
+      const decoded= jwt_decode(token);
+      console.log(token);
      // Set current user
       dispatch(setCurrentUser(decoded));
     })
     .catch(err =>
       dispatch({
         type: GET_ERRORS,
-        payload: err.response.data
+        payload: err
       })
 );
 };

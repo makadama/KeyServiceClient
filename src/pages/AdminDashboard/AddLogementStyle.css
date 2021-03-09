@@ -1,0 +1,52 @@
+
+.paying .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+}
+.paying .form .form-container {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0rem;
+  list-style-type: none;
+  height: auto;
+  margin-top: 75px;
+   align-items: center;
+}
+
+
+.paying .button {
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: auto;
+  color: #fff;
+  
+}
+
+.paying .old{
+  background-color: #1aaeb7;
+}
+
+.paying .old:hover{
+  background-color: #00cccb;
+}
+
+.paying .new{
+  background-color: #ed7e24;
+  margin-top: 50px;
+  margin-bottom: auto;
+}
+
+.paying .new:hover{
+  background-color: #ffb401;
+}
+
+
+

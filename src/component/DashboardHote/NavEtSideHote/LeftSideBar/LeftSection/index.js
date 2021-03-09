@@ -21,36 +21,68 @@ const LeftSection = ({auth}) => {
       <ul className="LeftSideBar__LeftSection__menuWrapper">
         <li>
           <a
-            href="/dashboardHote"
+            href="/welcomePage"
           >
-          <i class="fas fa-home" style={{marginRight:'8px'}}></i>
+          <i className="fas fa-home" style={{marginRight:'8px'}}></i>
             Accueil
           </a>
         </li>
         <li>
           <a
-            href={`/profil/${auth.user.id}`}
+            href="/proprietaires"
           >
-          <i class="fas fa-user" style={{marginRight:'8px'}}></i>
-            Mon profil
+          <i className="fas fa-user" style={{marginRight:'8px'}}></i>
+            Hôtes
           </a>
         </li>
        
-       
+       <li>
+          <a
+            href="/voyageurs"
+          >
+          <i className="fas fa-suitcase" style={{marginRight:'8px'}}></i>
+            Voyageurs
+          </a>
+        </li>
+
         <li>
           <a
             href="/logements"
           >
-          <i class="fas fa-building" style={{marginRight:'8px'}}></i>
-            Mes biens
+          <i className="fas fa-building" style={{marginRight:'8px'}}></i>
+            Logements
           </a>
         </li>
         <li>
           <a
-            href="#"
+            href="/locations"
           >
-          <i class="fas fa-envelope" style={{marginRight:'8px'}}></i>
-            Contacter Key Service
+          <i className="fas fa-key" style={{marginRight:'8px'}}></i>
+            Locations
+          </a>
+        </li>
+        <li>
+          <a
+            href="/taches"
+          >
+          <i className="fas fa-broom" style={{marginRight:'8px'}}></i>
+            Tâches
+          </a>
+        </li>
+         <li>
+          <a
+            href="/rendez-vous"
+          >
+          <i className="fas fa-calendar" style={{marginRight:'8px'}}></i>
+            Rendez-vous
+          </a>
+        </li>
+        <li>
+          <a
+            href="/commandes"
+          >
+          <i className="fas fa-shopping-cart" style={{marginRight:'8px'}}></i>
+            Commandes
           </a>
         </li>
       </ul>

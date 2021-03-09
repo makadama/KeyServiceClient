@@ -1,0 +1,9 @@
+.pagination{
+	width: 250px;
+	display: flex;
+	margin: auto;
+	list-style: none;
+	padding: 0;
+	justify-content: space-between;
+	text-decoration: none;
+}

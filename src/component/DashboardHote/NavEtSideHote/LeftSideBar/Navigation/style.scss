@@ -1,9 +1,183 @@
-.navig{
-	float: left;
-	width: 100em;
-	height: 4em;
-	margin-top: 0px;
-	margin-left: 10px;
-	background: blue;
-	z-index: 2;
+
+.logo img{
+	width: 110px;
+}
+
+
+
+.bar{
+	width: 30px;
+	margin: 4px;
+	height: 4px;
+	color: rgb(139, 139, 137);
+	background: #00cccb;
+}
+
+.bouton{
+	border: 1px solid #00cccb;
+	display: inline-block;
+}
+
+.logoBtn{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #fff;
+
+}
+
+nav{
+		
+		
+		position: fixed;
+		top: 0;
+		width: 88%;
+		z-index: 1;
+		background-color: #fff;
+
+
+
+	}
+
+nav ul{
+	list-style: none;
+	padding: 0 0;
+	height: 0px;
+	text-align: right;
+	overflow: hidden;
+	transition: all 0.5s ease;
+	margin-bottom: 0px;
+}
+
+.showNav{
+	height: 120px;
+	width: 100%;
+}
+
+
+
+nav ul li a{
+	display: block;
+	color: #000;
+	padding: 10px;
+	text-decoration: none;
+	transition: all 0.5s ease;
+	font-size: 18px;
+
+}
+
+nav ul li a:hover{
+	background: #00cccb;
+	color: #ed7e24;
+	text-decoration: none;
+	padding-right: 20px;
+
+}
+
+
+@media screen and (min-width:760px){
+	.btn_login{
+		background-color: white;
+		border: 1px solid #ed7e24;
+		color: #ed7e24;
+		display: inline-block;
+		padding: 5px 0;
+
+
+	}
+
+	.btn_register{
+		background-color: #00cccb;
+		border:  solid;
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 5px;
+		padding: 5px 0;
+		color: #fff;
+
+	}
+	nav{
+		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px;
+		height: 4em;
+		position: fixed;
+		top: 0;
+		width: 82em;
+		z-index: 1;
+		background-color: #fff;
+		margin-bottom: 0;
+
+
+	}
+	.bouton{
+		display: none;
+	}
+	nav ul{
+		display: flex;
+		height: auto;
+		
+}
+
+
+
+	.showNav{
+		height: auto;
+	}
+
+
+	nav ul a{
+		background: transparent;
+	}
+
+	.logBtn{
+		border: none;
+	}
+
+nav ul li a:hover{
+	background: none;
+	color: #ed7e24;
+	padding-left: 10px;
+	
+}
+
+nav ul li ul{
+	display: none;
+	padding: 0;
+	margin: 0;
+	height: auto;
+
+}
+
+nav ul li:hover ul{
+	padding:0;
+	display: block;
+
+}
+
+.btn_login:hover{
+		background-color: white;
+		border: 1px solid #ed7e24;
+		color: #ed7e24;
+		display: inline-block;
+		padding: 5px 0;
+		
+	}
+.btn_register:hover{
+		background-color: #00cccb;
+		border:  solid;
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 5px;
+		padding: 5px 0;
+		color: #fff;
+
+	}
+
+
+
+
+
 }

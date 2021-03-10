@@ -4,6 +4,7 @@ import { Redirect } from 'react-router';
 import { Provider } from "react-redux";
 import store from "./store";
 import NotFound from "./component/NotFound";
+import CookieConsent from "react-cookie-consent";
 import './App.css';
 
 
@@ -140,7 +141,9 @@ const DashboardAdmin = () =>(
         <Route exact path='/tache/ajouter-une-tache' component={AddTasksPage}/>
         <Route exact path='/taches/tache/:id' component={TaskDetailsPage}/>
         <Route exact path='/taches/tache/:id/modification' component={UpdateTasksPage}/>
-
+        <CookieConsent style={{ background: "#2c4b29" }}>
+          This website uses cookies to enhance the user experience.
+        </CookieConsent>
       </div>
   )
 

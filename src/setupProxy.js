@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://ks-backend.herokuapp.com/',
+      target: 'https://keyservicesapi.herokuapp.com/',
       changeOrigin: true,
     })
   );
